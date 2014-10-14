@@ -12,7 +12,7 @@ namespace GeometriskaFigurer
         {
             get
             {
-                return Math.PI * (length / 2) * (Width / 2);
+                return Math.PI * (Length / 2) * (Width / 2);
             }
         }
 
@@ -23,7 +23,8 @@ namespace GeometriskaFigurer
                 return Math.PI * Math.Sqrt(2 * (Length / 2) * (Length / 2) + 2 * (Width / 2) * (Width / 2));
             }
         }
+        // Genom basklassen ger dom nya värderna för längd o höjd
         public Elipse(double length, double width)
-            : base(length, Width) { }
+            : base(length, width) { }
     }
 }

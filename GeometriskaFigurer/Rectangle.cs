@@ -22,8 +22,8 @@ namespace GeometriskaFigurer
                return Width * 2 + Length * 2;
            }
        }
-
+        // Genom basklassen ger dom nya värderna för längd o höjd
         public Rectangle(double length, double width)
-            : base(length, Width) { }
+            : base(length, width) { }
     }
 }

@@ -8,14 +8,14 @@ namespace GeometriskaFigurer
 {
     public abstract class Shape
     {
-        private double _length;
+        private double _length;  //Privata variablar som kan hålla decimaltal
         private double _Width;
 
         public abstract double Area
         {
             get;
         }
-        public double Length
+        public double Length //Här kollas att längden är >0
         {
             get
             {
@@ -36,7 +36,7 @@ namespace GeometriskaFigurer
         }
 
 
-        public double Width
+        public double Width //här kollas så att bredden är >0
         {
             get
             {
@@ -51,13 +51,13 @@ namespace GeometriskaFigurer
                 _Width = value;
             }
         }
-        protected Shape (double length, double width)
+        protected Shape (double length, double width) //Efter att både bredd o längd har kollats och fått värden anges dom till konstruktorns parametrar.
         {
             _length = length;
             _Width = width;
         }
 
-        public override string ToString()
+        public override string ToString() //Retunerar en sträng med värdet, separerar och fixar med raderna också.
         {
             return string.Format("\nLängd :{0, 14:} \nBredd :{1, 14:} \nOmkretsen:{2, 14:.0} \nArean :{3, 14:.0}", Length, Width, Perimeter, Area);
         }
