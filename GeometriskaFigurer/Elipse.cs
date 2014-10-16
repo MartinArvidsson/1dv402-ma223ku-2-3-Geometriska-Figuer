@@ -16,7 +16,7 @@ namespace GeometriskaFigurer
             }
         }
 
-        public override double perimeter // Ska ange en omkrets för en elipse.
+        public override double Perimeter // Ska ange en omkrets för en elipse.
         {
             get
             {

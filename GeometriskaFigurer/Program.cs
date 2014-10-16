@@ -29,7 +29,7 @@ namespace GeometriskaFigurer
                     {
                         case 0:
                             Console.WriteLine(); //Stänga av
-                            return
+                            return;
                         case 1:
                             ViewShapeDetail(CreateShape(ShapeType.Elipse)); //Elipse
                             break;
@@ -41,7 +41,7 @@ namespace GeometriskaFigurer
                 catch // om man är utanför 0 o 2 skrivs detta ut
                 {
                     Console.BackgroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("\n angav inte ett giltigt tal. Ange ett nummer mellan 0 och 2 tack!\n");
+                    Console.WriteLine("\n angav inte ett giltigt tal. Ange ett nummer mellan [0 och 2] tack!\n");
                     Console.ResetColor();
                 }
                 Console.BackgroundColor = ConsoleColor.DarkBlue;
@@ -59,7 +59,7 @@ namespace GeometriskaFigurer
             switch (shapeType)
             {
                 case ShapeType.Elipse:
-                    Console.WriteLine("-        Elipse      -");
+                    Console.WriteLine("-        Elipse         -");
                     break;
 
                 case ShapeType.Rectangle:
@@ -73,7 +73,7 @@ namespace GeometriskaFigurer
 
             double length = ReadDoubleGreaterThanZero("ange längden tack.");
             double width = ReadDoubleGreaterThanZero("ange bredden tack.");
-
+           
             if (shapeType == ShapeType.Elipse)
             {
                 return new Elipse(length, width);
@@ -124,7 +124,7 @@ namespace GeometriskaFigurer
             Console.WriteLine("\n 1: Elips.");
             Console.WriteLine("\n 2: Rektangel.");
             Console.WriteLine("\n=============================");
-            Console.Write("\n Ange menyval mellan 0-2 tack! ");
+            Console.Write("\n Ange menyval mellan [0-2] tack! ");
         }
         private static void ViewShapeDetail(Shape Shape)
         {
